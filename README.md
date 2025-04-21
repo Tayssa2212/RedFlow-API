@@ -106,7 +106,7 @@ http://localhost:3000/
 
 ---
 
-## 👩‍💻 Contribuidores
+## Contribuidores
 
 - Tayssa Ramos Vergilio
 
