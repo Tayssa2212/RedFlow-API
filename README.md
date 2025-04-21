@@ -1,25 +1,130 @@
-Plataforma RedFlow
-versão: Node.js (armazenamento em memória)
-licença: MIT
+Perfeito! Aqui está o **README.md completo** pronto para colar no GitHub. Ele está formatado em Markdown e com emojis para deixar a apresentação mais atrativa:
 
-RedFlow é uma plataforma para gerenciamento de bancos de sangue hospitalares. O sistema foi desenvolvido para auxiliar hospitais na gestão de doadores, doações, tipos sanguíneos e estoques, permitindo um fluxo organizado das operações. Este projeto foi desenvolvido como parte da formação no curso Full Stack Web da Programadores do Amanhã (PdA).
+---
 
-📝 Descrição
-O projeto consiste em uma API RESTful construída com Node.js, utilizando Express, Nodemon e arquitetura MVC. Toda a lógica de negócio e os dados são gerenciados em memória por meio de arrays, com foco no aprendizado de estruturação backend e rotas HTTP. A plataforma permite registrar doadores, controlar doações e consultar o estoque por tipo sanguíneo.
+```md
+# 🩸 RedFlow API
 
-⚙️ Funcionalidades da API
-Cadastro e listagem de doadores
+**Versão**: Node.js (armazenamento em memória)  
+**Licença**: MIT  
+**Curso**: Full Stack Web — Programadores do Amanhã (PdA)
 
-Registro e consulta de doações
+---
 
-Controle de estoque por tipo sanguíneo
+## 🧬 Sobre o Projeto
 
-Organização por arquitetura MVC
+> RedFlow é uma plataforma para **gerenciamento de bancos de sangue hospitalares**, desenvolvida com foco no aprendizado de backend e estruturação de APIs RESTful com **Node.js**.
 
-Middleware de logging para todas as requisições
+Ela permite:
+- Gerenciar doadores e doações
+- Controlar o estoque por tipo sanguíneo
+- Organizar toda a aplicação usando arquitetura **MVC**
 
-Estrutura preparada para futura persistência (banco ou arquivo)
+---
 
+## ⚙️ Funcionalidades
+
+✅ **Cadastro e listagem de doadores**  
+📝 **Registro e consulta de doações**  
+🩸 **Controle de estoque por tipo sanguíneo**  
+📚 **Organização em arquitetura MVC**  
+🛠️ **Middleware de logging** em todas as requisições  
+🗄️ **Persistência temporária em memória (arrays)**
+
+---
+
+## 🧱 Estrutura do Projeto
+
+```
+redflow-api/
+├── controllers/       # Lógica de controle da aplicação
+├── models/            # Modelos de dados em memória
+├── routes/            # Rotas da API
+├── middlewares/       # Logger de requisições
+├── config/            # (Reservado para banco futuro)
+├── app.js             # Configuração do Express
+├── server.js          # Inicialização do servidor
+├── package.json       # Configurações do projeto
+```
+
+---
+
+## 🧩 Entidades
+
+- **👤 doadorModel**: Armazena informações dos doadores (CPF, nome, tipo sanguíneo)
+- **📦 doacaoModel**: Registra as doações (volume, data, doador)
+- **📊 estoque**: Calculado com base nas doações por tipo sanguíneo
+- **🧪 tipo_sanguineo**: Validado na lógica da aplicação
+
+---
+
+## 📋 Regras de Negócio
+
+- Cada doador possui **CPF único** e **tipo sanguíneo fixo**
+- As doações registram **data**, **volume** e **doador**
+- O estoque pode ser consultado por tipo sanguíneo
+- Toda requisição gera um **log com data/hora** via middleware
+
+---
+
+## ▶️ Como Rodar o Projeto
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/redflow-api.git
+cd redflow-api
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+```
+
+### 3. Inicie a API com Nodemon
+
+```bash
+npm run dev
+```
+
+### 4. Teste via navegador ou Postman
+
+```
+http://localhost:3000/
+```
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+- ⚙️ **Node.js** – Backend JavaScript
+- 🚀 **Express** – Framework de rotas
+- 🔁 **Nodemon** – Atualizações automáticas
+- 🧱 **Arquitetura MVC** – Separação clara de responsabilidades
+- 💾 **Arrays em memória** – Persistência temporária
+
+---
+
+## 👩‍💻 Contribuidores
+
+- Tayssa Ramos Vergilio
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a Licença MIT.  
+Consulte o arquivo `LICENSE` para mais informações.
+```
+
+---
+
+### Próximos passos
+
+a. Quer adicionar exemplos de chamadas com `curl` e JSON no README?  
+b. Deseja que eu gere o `swagger.json` com documentação automática?  
+c. Posso preparar uma estrutura futura para persistência com MongoDB ou SQLite?
 📁 Estrutura do Projeto
 Backend: Node.js + Express + MVC
 
