@@ -23,7 +23,7 @@ Cada doador possui um CPF único e um tipo sanguíneo fixo. As doações são re
 bash
 Copiar
 Editar
-git clone https://github.com/seu-usuario/redflow-api.git
+git clone https://github.com/Tayssa2212/redflow-api.git
 cd redflow-api
 npm install
 npm run dev
